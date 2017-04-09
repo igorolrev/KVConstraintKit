@@ -38,8 +38,8 @@ The following types of `operators` are provided by `KVConstraintKit`, to `add`, 
 Here's a quick example:
 ##### Without Using KVConstraintKit
 ```swift
-let v = UIView.prepareNewViewForAutoLayout()
-v.backgroundColor = UIColor.redColor()
+let v = UIView.prepareAutoLayoutView()
+v.backgroundColor = UIColor.red
 view.addSubview(v)
     
 // Prepare constraints and then add them on superview of view
@@ -64,15 +64,14 @@ let bottom = NSLayoutConstraint( item: v, attribute: .bottom,
 	                             multiplier: 1.0, constant: 0)
 
 v.superview?.addConstraints([top, leading, trailing, bottom])
-
 ```
+
 ##### Using KVConstraintKit
-> ```swift
+```swift
 v +== [.top, .leading, .trailing, .bottom]
 ```
-
 ##### Similarly for margin constraints
-> ```swift
+```swift
 v +== [ .leadingMargin, .trailingMargin, .topMargin, .bottomMargin]
 ```
 
