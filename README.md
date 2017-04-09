@@ -14,24 +14,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'KVConstraintKit'
 ```
-
-## Custom Operators
-The following types of `operators` are provided by `KVConstraintKit`, to `add`, `remove`, `access` and `modify` constraints.
-
-| Operator | Meaning |
-| :--------: |-------|
-|  +  | to `add` constraint |
-|  -  | to `remove` constraint |
-|  *  | to modify `multiplier` of constraint |
-|  ~  | to modify `Priority` ( **UILayoutPriority** ), `Relation` ( **NSLayoutRelation** ) & `Replace` constraint|
-| <-  | to access constraint by attributes ( **eg. NSLayoutAttribute.Height** ) |
-| +== | to add equal relation ( **NSLayoutRelation.Equal** ) constraint |
-| +>= | to add greater than or equal relation ( **NSLayoutRelation.GreaterThanOrEqual** ) constraint |
-| +<= | to add less than or equal relation ( **NSLayoutRelation.LessThanOrEqual** ) constraint |
-| *== | to add equal relation ( **NSLayoutRelation.Equal** ) constraint with `multiplier` |
-| *>= | to add greater than or equal relation ( **NSLayoutRelation.GreaterThanOrEqual** ) constraint with `multiplier` |
-| *<= | to add less than or equal relation ( **NSLayoutRelation.LessThanOrEqual** ) constraint with `multiplier` |
-
+## Auto Layout Attributes
+`KVConstraintKit` supports all built-in layout attributes as of iOS, tvOS & OSX, see the [NSLayoutAttribute](https://developer.apple.com/reference/uikit/nslayoutattribute) enum.
+<p align="center"> <img src="./Assets/ios&tvos_icon.png" /> </p>
 
 ## Usage
 
@@ -131,9 +116,6 @@ Aspact Ratio
 ```swift
 	view.applyAspectRatioConstraint()
 ```
-## Auto Layout Attributes
-`KVConstraintKit` supports all built-in layout attributes as of iOS, tvOS & OSX, see the [NSLayoutAttribute](https://developer.apple.com/reference/uikit/nslayoutattribute) enum.
-<p align="center"> <img src="./Assets/ios&tvos_icon.png" /> </p>
 
 #### Quick Reference
 
@@ -204,6 +186,23 @@ Aspact Ratio
 For more details see the [ApplyViewConstraint](./KVConstraintKit/ApplyViewConstraint.swift) extension and [LayoutRelationable Protocol](./KVConstraintKit/KVConstraintKitProtocol.swift) of `KVConstraintKit`.
 
 **Note:** Avoid using **Left** and **Right** attributes. Use **Leading** and **Trailing** instead. This allows the layout to adapt to the view’s reading direction. By default the reading direction is determined based on the current language set by the user.
+
+## Custom Operators
+The following types of `operators` are provided by `KVConstraintKit`, to `add`, `remove`, `access` and `modify` constraints.
+
+| Operator | Meaning |
+| :--------: |-------|
+|  +  | to `add` constraint |
+|  -  | to `remove` constraint |
+|  *  | to modify `multiplier` of constraint |
+|  ~  | to modify `Priority` ( **UILayoutPriority** ), `Relation` ( **NSLayoutRelation** ) & `Replace` constraint|
+| <-  | to access constraint by attributes ( **eg. NSLayoutAttribute.Height** ) |
+| +== | to add equal relation ( **NSLayoutRelation.Equal** ) constraint |
+| +>= | to add greater than or equal relation ( **NSLayoutRelation.GreaterThanOrEqual** ) constraint |
+| +<= | to add less than or equal relation ( **NSLayoutRelation.LessThanOrEqual** ) constraint |
+| *== | to add equal relation ( **NSLayoutRelation.Equal** ) constraint with `multiplier` |
+| *>= | to add greater than or equal relation ( **NSLayoutRelation.GreaterThanOrEqual** ) constraint with `multiplier` |
+| *<= | to add less than or equal relation ( **NSLayoutRelation.LessThanOrEqual** ) constraint with `multiplier` |
 
 ## License
 
