@@ -6,6 +6,7 @@
 
 KVConstraintKit is a DSL to make easy & impressive Auto Layout constraints on iOS, tvOS & OSX with Swift
 
+![KVConstraintKit](https://github.com/keshavvishwkarma/KVConstraintKit/blob/master/Assets/KVConstraintKit.png)
 ## Installation
 
 KVConstraintKit is available through [CocoaPods](http://cocoapods.org). To install
